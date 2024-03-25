@@ -1,0 +1,26 @@
+package java22scheme;
+public class Outer{
+   public class Inner{
+       public void display(){
+ }
+}
+void display(){
+  System.out.println("Outer display()");
+ }
+}
+package java22scheme;
+public class Inner{
+  void display(){
+      System.out.println("Inner display()");
+ }
+}
+package java22scheme;
+public class Main1{
+      public static void main(String[]args){
+        Outer outerObject=new Outer();
+        outerObject.display();
+        Outer.Inner innerObject=outerObject.newInner();
+        innerObject.display();
+ }
+}
+
